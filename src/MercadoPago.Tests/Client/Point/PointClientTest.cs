@@ -60,7 +60,7 @@ namespace MercadoPago.Tests.Client.Point
         public void Create_Success()
         {
             var request = new PointPaymentIntentRequest {
-                Amount = 350000,
+                Amount = 550000,
                 AdditionalInfo = new PointPaymentIntentAdditionalInfoRequest {ExternalReference = "PruebaCSharp", PrintOnTerminal = true, TicketNumber = "Prueba100"}
             };
 
