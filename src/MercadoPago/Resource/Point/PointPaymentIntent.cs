@@ -10,8 +10,10 @@ namespace MercadoPago.Resource.Point
     public class PointPaymentIntent : IResource
     {
         public string Id { get; set; }
+        public string State { get; set; }
+        public long? Amount { get; set; }
         public string DeviceId { get; set; }
-        public decimal? Amount { get; set; }
+        public PointPaymentIntentPayment Payment { get; set; }
         public PointPaymentIntentAdditionalInfo AdditionalInfo { get; set; }
 
         public string Status { get; set; }
