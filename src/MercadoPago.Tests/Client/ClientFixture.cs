@@ -9,7 +9,7 @@
     {
         public ClientFixture()
         {
-            MercadoPagoConfig.AccessToken = Environment.GetEnvironmentVariable("ACCESS_TOKEN");
+            MercadoPagoConfig.AccessToken = Environment.GetEnvironmentVariable("ACCESS_TOKEN", EnvironmentVariableTarget.User);
             User = GetUser();
         }
 

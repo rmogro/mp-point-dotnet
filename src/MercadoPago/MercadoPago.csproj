@@ -40,11 +40,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Client\Point\" />
     <Folder Include="Http\" />
+    <Folder Include="Resource\Point\" />
     <Folder Include="Serialization\" />
-    <Folder Include="Client\" />
     <Folder Include="Config\" />
-    <Folder Include="Resource\" />
     <Folder Include="Error\" />
     <Folder Include="Client\Payment\" />
     <Folder Include="Resource\Payment\" />

@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Client\Point\" />
     <Folder Include="Http\" />
     <Folder Include="Serialization\" />
-    <Folder Include="Client\" />
     <Folder Include="Resource\" />
     <Folder Include="Client\Mock\" />
     <Folder Include="Client\Payment\" />
