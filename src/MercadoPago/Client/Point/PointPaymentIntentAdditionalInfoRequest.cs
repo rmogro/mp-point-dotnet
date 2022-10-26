@@ -10,6 +10,6 @@ namespace MercadoPago.Client.Point
     {
         public string ExternalReference { get; set; }
         public bool? PrintOnTerminal { get; set; }
-        public decimal TicketNumber { get; set; }
+        public string TicketNumber { get; set; }
     }
 }

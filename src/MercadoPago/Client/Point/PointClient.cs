@@ -30,6 +30,24 @@ namespace MercadoPago.Client.Point
         {
         }
 
+        public PointPaymentIntent Create(string deviceId, PointPaymentIntentRequest request, RequestOptions requestOptions = null)
+        {
+            return Send(
+                $"/point/integration-api/devices/{deviceId}/payment-intents",
+                HttpMethod.POST,
+                request,
+                requestOptions);
+        }
+
+        public Task<PointPaymentIntent> CreateAsync(string deviceId, PointPaymentIntentRequest request, RequestOptions requestOptions = null)
+        {
+            return SendAsync(
+                $"/point/integration-api/devices/{deviceId}/payment-intents",
+                HttpMethod.POST,
+                request,
+                requestOptions);
+        }
+
         public PointPaymentIntent Get(string id, RequestOptions requestOptions = null)
         {
             return Send(

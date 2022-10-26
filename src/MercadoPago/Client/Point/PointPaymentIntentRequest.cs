@@ -8,7 +8,7 @@ namespace MercadoPago.Client.Point
 {
     public class PointPaymentIntentRequest: IdempotentRequest
     {
-        public decimal Amount { get; set; }
+        public long Amount { get; set; }
         public PointPaymentIntentAdditionalInfoRequest AdditionalInfo { get; set; }
     }
 }

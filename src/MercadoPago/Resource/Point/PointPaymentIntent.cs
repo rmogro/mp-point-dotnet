@@ -15,6 +15,7 @@ namespace MercadoPago.Resource.Point
         public string DeviceId { get; set; }
         public PointPaymentIntentPayment Payment { get; set; }
         public PointPaymentIntentAdditionalInfo AdditionalInfo { get; set; }
+        public string PaymentMode { get; set; }
 
         public string Status { get; set; }
         public DateTime? CreatedOn { get; set; }
