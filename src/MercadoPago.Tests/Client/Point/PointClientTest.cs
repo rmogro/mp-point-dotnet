@@ -60,13 +60,27 @@ namespace MercadoPago.Tests.Client.Point
         public void Create_Success()
         {
             var request = new PointPaymentIntentRequest {
-                Amount = 550000,
-                AdditionalInfo = new PointPaymentIntentAdditionalInfoRequest {ExternalReference = "PruebaCSharp", PrintOnTerminal = true, TicketNumber = "Prueba100"}
+                Amount = 500000,
+                AdditionalInfo = new PointPaymentIntentAdditionalInfoRequest {ExternalReference = "PruebaCSharp1", PrintOnTerminal = true, TicketNumber = "PruebaCS1"}
             };
 
             var deviceId = "INGENICO_MOVE2500__ING-ARG-4567446831";
             var paymentIntent = client.Create(deviceId, request, options);
             Assert.True(true);
+        }
+
+        [Fact]
+        public void GetPayment()
+        {
+            var paymentIntent = client.Get("044c2c9f-540c-437f-9cd4-e1b702852ad9", options);
+            if (paymentIntent.State == "FINISHED")
+            {
+                var cliente = new PaymentClient();
+                var pay = cliente.Get(paymentIntent.Payment.Id, options);
+            }
+
+            Assert.True(true);
+
         }
     }
 }
