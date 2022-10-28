@@ -21,5 +21,9 @@
         /// HTTP DELETE method
         /// </summary>
         DELETE,
+        /// <summary>
+        /// HTTP PATCH method
+        /// </summary>
+        PATCH,
     }
 }

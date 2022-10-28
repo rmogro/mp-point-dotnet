@@ -200,6 +200,8 @@
                     return System.Net.Http.HttpMethod.Put;
                 case HttpMethod.DELETE:
                     return System.Net.Http.HttpMethod.Delete;
+                case HttpMethod.PATCH:
+                    return new System.Net.Http.HttpMethod("PATCH");
                 default:
                     throw new ArgumentException($"Invalid value of {nameof(httpMethod)}.");
             }

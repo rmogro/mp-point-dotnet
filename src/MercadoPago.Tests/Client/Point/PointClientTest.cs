@@ -16,10 +16,12 @@ namespace MercadoPago.Tests.Client.Point
     {
         private readonly PointClient client;
         private readonly RequestOptions options;
+        private readonly DeviceClient device;
 
         public PointClientTest(ClientFixture clientFixture) : base(clientFixture)
         {
             client = new PointClient();
+            device = new DeviceClient();
             options = new RequestOptions();
             options.CustomHeaders.Add("x-test-scope", "sandbox");
         }
@@ -81,6 +83,23 @@ namespace MercadoPago.Tests.Client.Point
 
             Assert.True(true);
 
+        }
+
+        [Fact]
+        public void GetList_Devices()
+        {
+            //var request = new DevicePointAdditionalInfoResquest { IdPos = "", IdStore="", Limit=""}
+            var devices = device.GetPointDevices(null,options);
+            Assert.True(true);
+        }
+
+        [Fact]
+        public void ChangeOperatingMode()
+        {
+            var request = new PointDeviceOperatingModeRequest { OperatingMode = "STANDALONE" };
+            var deviceId = "INGENICO_MOVE2500__ING-ARG-4567446831";
+            var devices = device.ChangeOperatingMode(deviceId,request,options);
+            Assert.True(true);
         }
     }
 }

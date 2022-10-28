@@ -277,7 +277,7 @@
             {
                 AddIdempotencyKey(mercadoPagoRequest, request);
 
-                if (httpMethod == HttpMethod.POST || httpMethod == HttpMethod.PUT)
+                if (httpMethod == HttpMethod.POST || httpMethod == HttpMethod.PUT || httpMethod == HttpMethod.PATCH)
                 {
                     mercadoPagoRequest.Content = Serializer.SerializeToJson(request);
                 }
